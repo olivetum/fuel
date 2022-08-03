@@ -3,19 +3,33 @@ import WelcomeItem from './WelcomeItem.vue'
 </script>
 
 <template>
-  <div class="content">
-    <WelcomeItem>
 
-      <template #heading>LOTOS</template>
-      <template #distance> (4km) </template>
-      <template #address>Wojska Polskiego 123</template>
+  <div class="columns is-flex-wrap-wrap">
+    <WelcomeItem v-for="station in stations">
 
-      <template #dieselPrice>7,45 PLN</template>
+      <template #heading> {{ station.name }} </template>
+      <template #dieselPrice> {{ station.on }} </template>
 
     </WelcomeItem>
 
-
   </div>
 
-
 </template>
+
+<script>
+import {getStations, db} from "../firebase";
+
+export default {
+  data() {
+    return {
+      stations: getStations(db).then(data => data)
+
+    }
+  }
+}
+
+export const stations = await getStations(db)
+console.log(stations)
+
+
+</script>

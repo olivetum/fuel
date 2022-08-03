@@ -1,19 +1,25 @@
 <script setup>
-import {RouterLink, RouterView} from 'vue-router'
+import {RouterView} from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import NavigationBar from "./components/NavigationBar.vue";
+import NavigationBar from "./components/NavigationBar.vue"
 </script>
 
 <template>
-  <div class="container is-max-desktop">
+  <div class="container">
     <NavigationBar/>
 
-        <HelloWorld msg="Fuel"/>
-        <RouterView/>
+    <section class="section mt-0">
+      <HelloWorld msg="Fuel will help you save money"/>
+
+      <RouterView/>
+    </section>
   </div>
 
-
 </template>
+
+<script>
+
+</script>
 
 <style scoped>
 
