@@ -1,8 +1,8 @@
 <template>
-  <nav class="container navbar mb-6" role="navigation" aria-label="main navigation">
+  <nav class="navbar mb-6" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
-        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+        <img alt="logo" src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
       </a>
 
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -17,9 +17,6 @@
         <RouterLink class="navbar-item" to="/">Home</RouterLink>
         <RouterLink class="navbar-item" to="/about">About</RouterLink>
 
-        <a class="navbar-item">
-          Documentation
-        </a>
 
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">

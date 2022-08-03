@@ -5,17 +5,11 @@ import NavigationBar from "./components/NavigationBar.vue";
 </script>
 
 <template>
-  <div class="container">
+  <div class="container is-max-desktop">
     <NavigationBar/>
 
-    <div class="columns">
-      <div class="column">
         <HelloWorld msg="Fuel"/>
-      </div>
-      <div class="column">
         <RouterView/>
-      </div>
-    </div>
   </div>
 
 
