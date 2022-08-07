@@ -1,13 +1,19 @@
 <script setup>
-import {onMounted, ref} from "vue";
+// Vue Imports
+import {onMounted, ref} from "vue"
 
+// Firebase imports
 import {getFirestore, collection, getDocs} from 'firebase/firestore'
+import {getDatabase, ref as fbRef, set} from 'firebase/database'
 import {db} from "../firebase";
 
+// Components imports
 import WelcomeItem from './WelcomeItem.vue'
 
-const stations = ref([
+//
+// CODE:
 
+const stations = ref([
 ]);
 
 onMounted(async () => {
@@ -24,6 +30,8 @@ onMounted(async () => {
     stations.value.push(station)
   });
 });
+
+
 </script>
 
 <template>

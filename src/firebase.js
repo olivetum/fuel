@@ -1,7 +1,8 @@
 import firebase from "firebase/compat";
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore'
-import { connectFirestoreEmulator } from 'firebase/firestore'
+import { setDoc, doc } from 'firebase/firestore'
+import {getDatabase, ref as fbRef, set} from "firebase/database";
 
 const config = {
   apiKey: "AIzaSyCUtDxhovH9Hr1V-qZHmnrXKIWvqd2KB2w",
@@ -23,5 +24,10 @@ export const db = getFirestore(app);
 //   const stationList = stationSnapshot.docs.map(doc => doc.data());
 //   return stationList;
 // }
+
+
+await setDoc(doc(db, 'stations', 'TS'), {
+  name: "test"
+});
 
 
