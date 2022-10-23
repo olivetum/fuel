@@ -3,8 +3,7 @@
 import {onMounted, ref} from "vue"
 
 // Firebase imports
-import {getFirestore, collection, getDocs} from 'firebase/firestore'
-import {getDatabase, ref as fbRef, set} from 'firebase/database'
+import {collection, getDocs} from 'firebase/firestore'
 import {db} from "../firebase";
 
 // Components imports

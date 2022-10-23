@@ -45,7 +45,7 @@
         <div class="navbar-item">
           <div class="buttons">
             <a class="button is-primary">
-              <strong>Sign up</strong>
+              <strong @click="">Add station</strong>
             </a>
             <a class="button is-light">
               Log in
@@ -58,9 +58,15 @@
 </template>
 
 <script>
+import { collection, addDoc } from 'firebase/firestore'
+
 export default {
   name: "NavigationBar"
 }
+
+// await addDoc(collection(db, 'stations'), {
+//   name: "Tokyo",
+// });
 </script>
 
 <style scoped>

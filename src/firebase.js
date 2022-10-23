@@ -1,8 +1,6 @@
 import firebase from "firebase/compat";
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore'
-import { setDoc, doc } from 'firebase/firestore'
-import {getDatabase, ref as fbRef, set} from "firebase/database";
+import { getFirestore, collection, addDoc, onSnapshot } from 'firebase/firestore'
 
 const config = {
   apiKey: "AIzaSyCUtDxhovH9Hr1V-qZHmnrXKIWvqd2KB2w",
@@ -17,17 +15,9 @@ const config = {
 const app = !firebase.apps.length ? initializeApp(config) : firebase.app();
 export const db = getFirestore(app);
 
-// // Stations
-// export async function getStations(db) {
-//   const stationsCol = collection(db, 'stations');
-//   const stationSnapshot = await getDocs(stationsCol);
-//   const stationList = stationSnapshot.docs.map(doc => doc.data());
-//   return stationList;
-// }
 
-
-await setDoc(doc(db, 'stations', 'TS'), {
-  name: "test"
-});
+// await addDoc(collection(db, 'stations'), {
+//   name: "Tokyo",
+// });
 
 
